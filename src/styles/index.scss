@@ -1,0 +1,83 @@
+@use "./reset.scss";
+
+// 全局样式
+// 小米字体
+// https://hyperos.mi.com/font/details/sc
+@font-face {
+  font-family: "MiSans";
+  src: url("http://127.0.0.1/static/font/MiSans-Medium.ttf") format("truetype");
+  /* 可能还需要其他字体格式的引用，具体取决于字体文件 */
+  /* 可以设置字体的其他属性，如字重、字体样式等 */
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family:
+    "MiSans", "PingFang SC", "Lantinghei SC", "Helvetica Neue", Helvetica,
+    Arial, "Microsoft YaHei", "STHeitiSC-Light", simsun, "WenQuanYi Zen Hei",
+    "WenQuanYi Micro Hei", "sans-serif";
+  background-color: #e4e4e4;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+// 禁止变更文本域尺寸
+textarea {
+  resize: none;
+}
+
+// 禁止选中
+img {
+  user-select: none;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+// 路由动画
+@keyframes routerAni {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.router-ani {
+  animation: routerAni 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+// 菜单
+.menu-no-popper {
+  display: none !important;
+}
+
+// 透明度渐入渐出动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+}
