@@ -2,7 +2,7 @@
 
 ## 1.克隆项目
 
-git clone https://.git
+git clone https://github.com/Cynic158/vue_admin_template.git
 
 ## 2.安装依赖
 
